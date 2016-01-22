@@ -14,44 +14,55 @@
 html {
   background-color: $bg;
   box-sizing: $bx;
-  @include flex;
 }
 
 *, *:before, *:after {
   box-sizing: $bx;
 }
 
-
 /*****************
-      CANVAS
+ ELE STYLING
 *****************/
-
-canvas {
-  width: 800px;
-  height: 350px;
-  background-color: $bg-w;
-  margin: 10px 0;
-
-}
-
-
-/*****************
-      COLORS
-*****************/
-
-#colors {
-  width: 800px;
-  height: 100px;
-  background-color: $bg-w;
-  box-shadow: 0 8px 6px -6px #666;
+#container {
   @include flex;
-  flex-flow: row nowrap;
-}
-
-.color {
-  width: 70px;
-  height: 70px;
-  background-color: #000;
-  margin: 0 10px;
-  border-radius: 10px;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+    canvas {
+      width: 65%;
+      height: 65%;
+      background-color: $bg-w;
+      margin: 10px 0;
+      box-shadow: 0 8px 6px -6px $bg-g;
+    }
+    #colors {
+      width: 65%;
+      height: 80px;
+      background-color: $bg;
+      // box-shadow: 0 8px 6px -6px $bg-g;
+      @include flex;
+      flex-flow: row nowrap;
+      margin-bottom: 120px;
+    }
+    .color {
+      width: 70px;
+      height: 70px;
+      background-color: $bg-w;
+      border: 1px solid #333;
+      margin: 0 10px;
+      &:hover {
+        animation: circle 0.1s ease-out;
+        animation-fill-mode: forwards;
+        cursor: pointer;
+      }
+    }
+    @keyframes circle {
+      50% {
+        border-radius: 20px;
+      }
+      100% {
+        border-radius: 40px;
+      }
+    }
 }

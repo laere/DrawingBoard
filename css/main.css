@@ -538,41 +538,51 @@ th {
 *****************/
 html {
   background-color: #A2C2A8;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
 
 /*****************
-      CANVAS
+ ELE STYLING
 *****************/
-canvas {
-  width: 800px;
-  height: 350px;
-  background-color: #fff;
-  margin: 10px 0; }
-
-/*****************
-      COLORS
-*****************/
-#colors {
-  width: 800px;
-  height: 100px;
-  background-color: #fff;
-  box-shadow: 0 8px 6px -6px #666;
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row nowrap; }
-
-.color {
-  width: 70px;
-  height: 70px;
-  background-color: #000;
-  margin: 0 10px;
-  border-radius: 10px; }
+  flex-flow: column wrap;
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh; }
+  #container canvas {
+    width: 65%;
+    height: 65%;
+    background-color: #fff;
+    margin: 10px 0;
+    box-shadow: 0 8px 6px -6px #666; }
+  #container #colors {
+    width: 65%;
+    height: 80px;
+    background-color: #A2C2A8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-bottom: 120px; }
+  #container .color {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid #333;
+    margin: 0 10px; }
+    #container .color:hover {
+      animation: circle 0.1s ease-out;
+      animation-fill-mode: forwards;
+      cursor: pointer; }
+@keyframes circle {
+  50% {
+    border-radius: 20px; }
+  100% {
+    border-radius: 40px; } }
 
 /*# sourceMappingURL=main.css.map */
