@@ -22,6 +22,9 @@ html {
   box-sizing: $bx;
 }
 
+body {
+  font-family: $mfont;
+}
 /*****************
 CANVAS AND COLORSS
 *****************/
@@ -31,7 +34,7 @@ CANVAS AND COLORSS
   margin: 0 auto;
   width: 90%;
   height: 970px;
-  background-color: red;
+//  background-color: red;
     canvas {
       width: 60%;
       height: 65%;
@@ -41,7 +44,7 @@ CANVAS AND COLORSS
     #colors {
       width: 5%;
       height: 65%;
-      background-color: blue;
+    //  background-color: blue;
       // box-shadow: 0 8px 6px -6px $bg-g;
       @include flex;
       flex-flow: column nowrap;
@@ -69,9 +72,9 @@ CANVAS AND COLORSS
       }
     }
     #color-picker-wrapper   {
-      width: 35%;
+      width: 30%;
       height: 65%;
-      background-color: yellow;
+    //  background-color: yellow;
       position: relative;
       #color-picker-arrow {
         width: 0;
@@ -80,17 +83,26 @@ CANVAS AND COLORSS
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         position: absolute;
-        left: 20%;
+        left: 10%;
         top: 50%;
       }
       #color-picker-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 100%;
-        width: 20%;
+        width: 10%;
         background-color: #2f2f2f;
         position: absolute;
         left: 0%;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+        p {
+          color: white;
+          text-align: center;
+          font-size: 1.3em;
+        }
+
       }
     }
 
