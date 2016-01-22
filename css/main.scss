@@ -1,0 +1,57 @@
+/*****************
+    IMPORTS
+*****************/
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import '_normalize';
+@import '_mixins';
+@import '_vars';
+
+
+/*****************
+  BASE STYLING
+*****************/
+html {
+  background-color: $bg;
+  box-sizing: $bx;
+  @include flex;
+}
+
+*, *:before, *:after {
+  box-sizing: $bx;
+}
+
+
+/*****************
+      CANVAS
+*****************/
+
+canvas {
+  width: 800px;
+  height: 350px;
+  background-color: $bg-w;
+  margin: 10px 0;
+
+}
+
+
+/*****************
+      COLORS
+*****************/
+
+#colors {
+  width: 800px;
+  height: 100px;
+  background-color: $bg-w;
+  box-shadow: 0 8px 6px -6px #666;
+  @include flex;
+  flex-flow: row nowrap;
+}
+
+.color {
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+  margin: 0 10px;
+  border-radius: 10px;
+}
