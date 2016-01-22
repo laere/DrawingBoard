@@ -74,7 +74,6 @@ CANVAS AND COLORSS
     #color-picker-wrapper   {
       width: 30%;
       height: 65%;
-    //  background-color: yellow;
       position: relative;
       #color-picker-arrow {
         width: 0;
@@ -97,15 +96,41 @@ CANVAS AND COLORSS
         left: 0%;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+        cursor:pointer;
         p {
           color: white;
           text-align: center;
           font-size: 1.3em;
         }
-
+      }
+      #color-picker {
+        margin-left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        width: 50%;
+        height: 100%;
+        background-color: $bg-w;
+        border-radius: 20px;
+        input {
+          margin: 15px 0;
+          display: inline-block;
+        }
+        span {
+          display: block;
+        }
+        #color-chosen {
+          border: 1px solid black;
+          width: 100px;
+          height: 100px;
+          margin-top: 20px;
+        }
+        .sliders {
+          margin: 5px 0;
+        }
       }
     }
-
 }
 
 /*****************
