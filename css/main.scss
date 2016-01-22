@@ -25,32 +25,35 @@ html {
 *****************/
 #container {
   @include flex;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
   margin: 0 auto;
   width: 90%;
-  height: 100vh;
+  height: 970px;
+  //background-color: red;
     canvas {
       width: 65%;
       height: 65%;
       background-color: $bg-w;
-      margin: 10px 0;
+      margin-bottom: 110px;
       box-shadow: 0 8px 6px -6px $bg-g;
     }
     #colors {
-      width: 65%;
-      height: 80px;
-      background-color: $bg;
+      width: 5%;
+      height: 65%;
+      //background-color: $bg-g;
       // box-shadow: 0 8px 6px -6px $bg-g;
       @include flex;
-      flex-flow: row nowrap;
-      margin-bottom: 120px;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      margin-bottom: 110px;
     }
     .color {
       width: 70px;
       height: 70px;
       background-color: $bg-w;
       border: 1px solid #333;
-      margin: 0 10px;
+      margin: 10px 0;
+      flex: 1 0 auto;
       &:hover {
         animation: circle 0.1s ease-out;
         animation-fill-mode: forwards;

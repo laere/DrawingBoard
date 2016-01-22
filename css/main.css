@@ -550,31 +550,32 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
   margin: 0 auto;
   width: 90%;
-  height: 100vh; }
+  height: 970px; }
   #container canvas {
     width: 65%;
     height: 65%;
     background-color: #fff;
-    margin: 10px 0;
+    margin-bottom: 110px;
     box-shadow: 0 8px 6px -6px #666; }
   #container #colors {
-    width: 65%;
-    height: 80px;
-    background-color: #A2C2A8;
+    width: 5%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row nowrap;
-    margin-bottom: 120px; }
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-bottom: 110px; }
   #container .color {
     width: 70px;
     height: 70px;
     background-color: #fff;
     border: 1px solid #333;
-    margin: 0 10px; }
+    margin: 10px 0;
+    flex: 1 0 auto; }
     #container .color:hover {
       animation: circle 0.1s ease-out;
       animation-fill-mode: forwards;
