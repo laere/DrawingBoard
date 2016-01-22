@@ -538,13 +538,15 @@ th {
 *****************/
 html {
   background-color: #A2C2A8;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
 
 /*****************
- ELE STYLING
+CANVAS AND COLORSS
 *****************/
 #container {
   display: flex;
@@ -553,37 +555,63 @@ html {
   flex-flow: row nowrap;
   margin: 0 auto;
   width: 90%;
-  height: 970px; }
+  height: 970px;
+  background-color: red; }
   #container canvas {
-    width: 65%;
+    width: 60%;
     height: 65%;
     background-color: #fff;
-    margin-bottom: 110px;
     box-shadow: 0 8px 6px -6px #666; }
   #container #colors {
     width: 5%;
     height: 65%;
+    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    margin-bottom: 110px; }
-  #container .color {
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    border: 1px solid #333;
-    margin: 10px 0;
-    flex: 1 0 auto; }
-    #container .color:hover {
-      animation: circle 0.1s ease-out;
-      animation-fill-mode: forwards;
-      cursor: pointer; }
+    justify-content: space-between; }
+    #container #colors .color {
+      width: 70px;
+      height: 70px;
+      background-color: #fff;
+      border: 1px solid #333;
+      margin: 10px 0;
+      flex: 1 0 auto; }
+      #container #colors .color:hover {
+        animation: circle 0.1s ease-out;
+        animation-fill-mode: forwards;
+        cursor: pointer; }
 @keyframes circle {
   50% {
     border-radius: 20px; }
   100% {
     border-radius: 40px; } }
+  #container #color-picker-wrapper {
+    width: 35%;
+    height: 65%;
+    background-color: yellow;
+    position: relative; }
+    #container #color-picker-wrapper #color-picker-arrow {
+      width: 0;
+      height: 0;
+      border-left: 15px solid #2f2f2f;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      position: absolute;
+      left: 20%;
+      top: 50%; }
+    #container #color-picker-wrapper #color-picker-body {
+      height: 100%;
+      width: 20%;
+      background-color: #2f2f2f;
+      position: absolute;
+      left: 0%;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+
+/*****************
+ COLOR PICKER
+*****************/
 
 /*# sourceMappingURL=main.css.map */
