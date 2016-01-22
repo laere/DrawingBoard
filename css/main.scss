@@ -120,14 +120,20 @@ CANVAS AND COLORSS
         span {
           display: block;
         }
-        #color-chosen {
+        #color-chosen,  {
           border: 1px solid black;
           width: 100px;
           height: 100px;
-          margin-top: 20px;
+          margin-bottom: 15px;
         }
         .sliders {
           margin: 5px 0;
+        }
+        #shapes {
+          margin: 0;
+          width: 200px;
+          height: 100px;
+          border: 1px solid black;
         }
       }
     }

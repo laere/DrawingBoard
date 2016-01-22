@@ -637,9 +637,14 @@ CANVAS AND COLORSS
         border: 1px solid black;
         width: 100px;
         height: 100px;
-        margin-top: 20px; }
+        margin-bottom: 15px; }
       #container #color-picker-wrapper #color-picker .sliders {
         margin: 5px 0; }
+      #container #color-picker-wrapper #color-picker #shapes {
+        margin: 0;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black; }
 
 /*****************
  COLOR PICKER
