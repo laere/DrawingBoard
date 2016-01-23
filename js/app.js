@@ -1,8 +1,8 @@
 $(function() {
-
   $colorPicker = $('#color-picker');
-//  $colorPicker.hide();
-
+  $divColor = $('div.color');
+  //  $colorPicker.hide();
+  updateColor();
   //toggle color picker
   $('#color-picker-body').click(function() {
     //add animation class on click
@@ -11,15 +11,6 @@ $(function() {
     $colorPicker.toggle();
   });
 
-  //color selecting
-  $('div.color').click(function() {
-    //current color with select
-    $currentColor = $('div.color.select');
-    //context of clicked element
-    $(this).addClass('select');
-    //remove class if currently active on an element.
-    $currentColor.removeClass('select');
-  });
 
   $('#add-color').click(function() {
     //when button is clicked
@@ -31,6 +22,39 @@ $(function() {
     //find a way to limit the amount of colors a user can add.
   });
 
+  //color selecting
+  $divColor.click(function() {
+    //current color with select
+    $currentColor = $('div.color.select');
+    //context of clicked element
+    $(this).addClass('select');
+    //remove class if currently active on an element.
+    $currentColor.removeClass('select');
+  });
 
+  //Test function//
+  $('html').click(function() {
+  });
 
-})(jQuery);
+  //Problem: sliders don't have functionality
+  //Solution: When sliders are moved they show the colors
+
+  //convert the rgb values to hex
+  function rgbToHex(r,g,b) {
+    $hexRed = r.toString(16);
+    $hexGreen = g.toString(16);
+    $hexBlue = b.toString(16);
+    console.log($hexRed);
+    console.log($hexGreen);
+    console.log($hexBlue);
+    return '#' + $hexRed + $hexGreen + $hexBlue;
+  }
+  //update the 'Your Color' with rgb color;
+
+  function updateColor() {
+    $colorChosen = $('#color-chosen');
+    $color = rgbToHex(55,22,111);
+    $colorChosen.css('background-color', $color);
+  }
+
+});
