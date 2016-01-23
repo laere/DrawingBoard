@@ -58,22 +58,7 @@ CANVAS AND COLORSS
         border-radius: 40px;
         border: 2px solid #2f2f2f;
       }
-
     }
-        //margin: 10px 0;
-        // &:hover {
-        //   animation: circle 0.1s ease-out;
-        //   animation-fill-mode: forwards;
-        //   cursor: pointer;
-        // }
-        // @keyframes circle {
-        //   50% {
-        //     border-radius: 20px;
-        //   }
-        //   100% {
-        //     border-radius: 40px;
-        //   }
-        // }
 
 
     #color-picker-wrapper   {
@@ -121,7 +106,7 @@ CANVAS AND COLORSS
         border-radius: 20px;
         box-shadow: 2px 2px 15px $bg-g;
         input {
-          margin: 15px 0;
+          margin: 5px 0;
           display: inline-block;
         }
         span {
@@ -133,8 +118,13 @@ CANVAS AND COLORSS
           height: 100px;
           margin-bottom: 15px;
         }
+        #add-color {
+          background-color: #c2a2bc;
+          width: 100%;
+          margin-top: -10px;
+        }
         .sliders {
-          margin: 5px 0;
+          margin: 2px 0;
         }
         #shapes {
           margin: 0;

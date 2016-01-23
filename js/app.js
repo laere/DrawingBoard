@@ -1,6 +1,7 @@
 $(function() {
+
   $colorPicker = $('#color-picker');
-  $colorPicker.hide();
+//  $colorPicker.hide();
 
   //toggle color picker
   $('#color-picker-body').click(function() {
@@ -10,6 +11,7 @@ $(function() {
     $colorPicker.toggle();
   });
 
+  //color selecting
   $('div.color').click(function() {
     //current color with select
     $currentColor = $('div.color.select');
@@ -19,4 +21,16 @@ $(function() {
     $currentColor.removeClass('select');
   });
 
-});
+  $('#add-color').click(function() {
+    //when button is clicked
+    $colors = $('#colors');
+    //create div ele with class'color'
+    //append it to the container '#colors'
+    //later this will be the color the player creates
+    $colors.append('<div class=color></div>');
+    //find a way to limit the amount of colors a user can add.
+  });
+
+
+
+})(jQuery);
