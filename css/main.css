@@ -577,15 +577,9 @@ CANVAS AND COLORSS
       width: 70px;
       height: 70px;
       background-color: #fff; }
-      #container #colors .color:hover {
-        animation: circle 0.1s ease-out;
-        animation-fill-mode: forwards;
-        cursor: pointer; }
-@keyframes circle {
-  50% {
-    border-radius: 20px; }
-  100% {
-    border-radius: 40px; } }
+    #container #colors .select {
+      border-radius: 40px;
+      border: 2px solid #2f2f2f; }
   #container #color-picker-wrapper {
     width: 30%;
     height: 65%;

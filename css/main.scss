@@ -53,22 +53,29 @@ CANVAS AND COLORSS
         width: 70px;
         height: 70px;
         background-color: $bg-w;
-        //margin: 10px 0;
-        &:hover {
-          animation: circle 0.1s ease-out;
-          animation-fill-mode: forwards;
-          cursor: pointer;
-        }
-        @keyframes circle {
-          50% {
-            border-radius: 20px;
-          }
-          100% {
-            border-radius: 40px;
-          }
-        }
       }
+      .select {
+        border-radius: 40px;
+        border: 2px solid #2f2f2f;
+      }
+
     }
+        //margin: 10px 0;
+        // &:hover {
+        //   animation: circle 0.1s ease-out;
+        //   animation-fill-mode: forwards;
+        //   cursor: pointer;
+        // }
+        // @keyframes circle {
+        //   50% {
+        //     border-radius: 20px;
+        //   }
+        //   100% {
+        //     border-radius: 40px;
+        //   }
+        // }
+
+
     #color-picker-wrapper   {
       width: 30%;
       height: 65%;

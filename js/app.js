@@ -1,14 +1,22 @@
 $(function() {
   $colorPicker = $('#color-picker');
-  //TOGGLE COLOR PICKER!
-  //When color picker is color-picker-body is clicked
-  //show color picker;
-  //when clicked again, hide color picker.
-$('#color-picker-body').click(function() {
-  $colorPicker.toggle('fast');
+  $colorPicker.hide();
+
+  //toggle color picker
+  $('#color-picker-body').click(function() {
+    //add animation class on click
+    $colorPicker.addClass('animated slideInRight');
+    //toggle the display of the color picker
+    $colorPicker.toggle();
+  });
+
+  $('div.color').click(function() {
+    //current color with select
+    $currentColor = $('div.color.select');
+    //context of clicked element
+    $(this).addClass('select');
+    //remove class if currently active on an element.
+    $currentColor.removeClass('select');
+  });
+
 });
-
-
-
-
-})(jQuery);
