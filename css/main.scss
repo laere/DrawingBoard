@@ -44,7 +44,7 @@ CANVAS AND COLORSS
     #colors {
       width: 5%;
       height: 65%;
-    //  background-color: blue;
+      //background-color: blue;
       // box-shadow: 0 8px 6px -6px $bg-g;
       @include flex;
       flex-flow: column nowrap;
@@ -53,9 +53,7 @@ CANVAS AND COLORSS
         width: 70px;
         height: 70px;
         background-color: $bg-w;
-        border: 1px solid #333;
-        margin: 10px 0;
-        flex: 1 0 auto;
+        //margin: 10px 0;
         &:hover {
           animation: circle 0.1s ease-out;
           animation-fill-mode: forwards;
@@ -75,6 +73,7 @@ CANVAS AND COLORSS
       width: 30%;
       height: 65%;
       position: relative;
+    //  background-color: red;
       #color-picker-arrow {
         width: 0;
         height: 0;
@@ -113,7 +112,7 @@ CANVAS AND COLORSS
         height: 100%;
         background-color: $bg-w;
         border-radius: 20px;
-        box-shadow: 2px 2px 10px $bg-g;
+        box-shadow: 2px 2px 15px $bg-g;
         input {
           margin: 15px 0;
           display: inline-block;

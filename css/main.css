@@ -576,10 +576,7 @@ CANVAS AND COLORSS
     #container #colors .color {
       width: 70px;
       height: 70px;
-      background-color: #fff;
-      border: 1px solid #333;
-      margin: 10px 0;
-      flex: 1 0 auto; }
+      background-color: #fff; }
       #container #colors .color:hover {
         animation: circle 0.1s ease-out;
         animation-fill-mode: forwards;
@@ -628,7 +625,7 @@ CANVAS AND COLORSS
       height: 100%;
       background-color: #fff;
       border-radius: 20px;
-      box-shadow: 2px 2px 10px #666; }
+      box-shadow: 2px 2px 15px #666; }
       #container #color-picker-wrapper #color-picker input {
         margin: 15px 0;
         display: inline-block; }
