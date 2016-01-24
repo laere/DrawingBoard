@@ -101,7 +101,6 @@ CANVAS AND COLORSS
         background-color: $bg-w;
         border-radius: 20px;
         box-shadow: 2px 2px 15px $bg-g;
-        border-bottom: 80px solid #c2a2bc;
         input {
           margin: 5px 0;
           display: inline-block;
@@ -114,17 +113,15 @@ CANVAS AND COLORSS
           border: 1px solid black;
           width: 100px;
           height: 100px;
-          margin: 0 auto;
+          margin: 10px auto;
         }
         #add-color {
           background-color: #c2a2bc;
-          position: absolute;;
-          bottom: 3%;
-          left: 28%;
-          font-size: 1.75em;
+          font-size: 1.5em;
           color: $bg-w;
           cursor:pointer;
-
+          margin-top: 10px;
+          border-radius: 20px;
         }
         .sliders {
           margin: 2px 0;

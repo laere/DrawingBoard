@@ -615,8 +615,7 @@ CANVAS AND COLORSS
       height: 100%;
       background-color: #fff;
       border-radius: 20px;
-      box-shadow: 2px 2px 15px #666;
-      border-bottom: 80px solid #c2a2bc; }
+      box-shadow: 2px 2px 15px #666; }
       #container #color-picker-wrapper #color-picker input {
         margin: 5px 0;
         display: inline-block; }
@@ -627,15 +626,14 @@ CANVAS AND COLORSS
         border: 1px solid black;
         width: 100px;
         height: 100px;
-        margin: 0 auto; }
+        margin: 10px auto; }
       #container #color-picker-wrapper #color-picker #add-color {
         background-color: #c2a2bc;
-        position: absolute;
-        bottom: 3%;
-        left: 28%;
-        font-size: 1.75em;
+        font-size: 1.5em;
         color: #fff;
-        cursor: pointer; }
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 20px; }
       #container #color-picker-wrapper #color-picker .sliders {
         margin: 2px 0;
         text-align: center; }
