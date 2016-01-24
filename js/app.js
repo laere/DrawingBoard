@@ -1,5 +1,4 @@
 
-
   $colorPicker = $('#color-picker');
   $divColor = $('div.color');
 
@@ -47,12 +46,14 @@
      $red = value;
      $numBox.val($red);
      console.log($red);
+     updateColor();
    }
    function changeRedSliderVal(value) {
      var $slider = $('#red');
      $red = value;
      $slider.val($red);
      console.log($red);
+     updateColor();
    }
 
    var $green = 0;
@@ -61,12 +62,14 @@
       $green = value;
       $numBox.val($green);
       console.log($green);
+      updateColor();
     }
     function changeGreenSliderVal(value) {
       var $slider = $('#green');
       $green = value;
       $slider.val($green);
       console.log($green);
+      updateColor();
     }
 
     var $blue = 0;
@@ -75,29 +78,23 @@
        $blue = value;
        $numBox.val($blue);
        console.log($blue);
-
+       updateColor();
      }
      function changeBlueSliderVal(value) {
        var $slider = $('#blue');
        $blue = value;
        $slider.val($blue);
        console.log($blue);
-
+      updateColor();
      }
-  //CONVERT RGB TO HEX
-  function rgbToHex() {
-    $hexRed = $red.toString(16);
-    $hexGreen = $green.toString(16);
-    $hexBlue = $blue.toString(16);
-    console.log($hexRed);
-    console.log($hexGreen);
-    console.log($hexBlue);
-    return '#' + $hexRed + $hexGreen + $hexBlue;
+  //USE CSS RGB SELECTOR
+  function rgb(r,g,b) {
+    return "rgb("+r+","+g+","+b+")";
   }
-  //UPDATE COLOR BASED ON HEX VALUES
+
+  //UPDATE COLOR BASED RGB VALUES
   function updateColor() {
-    $colorChosen = $('#color-chosen');
-    $color = rgbToHex();
-    $colorChosen.css('background-color', $color);
-  }
+  $colorChosen = $('#color-chosen');
+  $colorChosen.css('background-color', rgb($red,$green,$blue));
+}
   updateColor();
