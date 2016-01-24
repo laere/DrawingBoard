@@ -46,21 +46,17 @@ CANVAS AND COLORSS
       height: 65%;
       //background-color: blue;
       // box-shadow: 0 8px 6px -6px $bg-g;
-      @include flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
       .color {
         width: 70px;
         height: 70px;
         background-color: $bg-w;
+        margin-bottom: 5px;
       }
       .select {
         border-radius: 40px;
         border: 2px solid #2f2f2f;
       }
     }
-
-
     #color-picker-wrapper   {
       width: 30%;
       height: 65%;

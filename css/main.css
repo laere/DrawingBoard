@@ -567,16 +567,12 @@ CANVAS AND COLORSS
     box-shadow: 0 8px 6px -6px #666; }
   #container #colors {
     width: 5%;
-    height: 65%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: space-between; }
+    height: 65%; }
     #container #colors .color {
       width: 70px;
       height: 70px;
-      background-color: #fff; }
+      background-color: #fff;
+      margin-bottom: 5px; }
     #container #colors .select {
       border-radius: 40px;
       border: 2px solid #2f2f2f; }

@@ -4,7 +4,7 @@ addColor();
 var $red = 0;
 var $green = 0;
 var $blue = 0;
-$divColor = $('div.color');
+$div = $('<div class="color"></div>');
 // Problem: sliders don't have functionality
 // Solution: When sliders are moved they show the colors
 //Data binding the RGB slider and input values
@@ -85,13 +85,4 @@ $('#color-picker-body').click(function() {
   $colorPicker.addClass('animated slideInRight');
   //toggle the display of the color picker
   $colorPicker.toggle();
-});
-//INDICATE SELECTED COLOR
-$divColor.click(function() {
-  //current color with select
-  $currentSelect = $('div.color.select');
-  //context of clicked element
-  $(this).addClass('select');
-  //remove class if currently active on an element.
-  $currentSelect.removeClass('select');
 });
