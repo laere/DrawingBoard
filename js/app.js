@@ -1,5 +1,5 @@
 
-$(function() {
+
   $colorPicker = $('#color-picker');
   $divColor = $('div.color');
 
@@ -29,7 +29,7 @@ $(function() {
     //remove class if currently active on an element.
     $currentColor.removeClass('select');
   });
-});
+
 
   //Test function//
   // $('html').click(function() {
@@ -37,29 +37,58 @@ $(function() {
   // });
 
 
-  updateColor();
-  //Problem: sliders don't have functionality
-  //Solution: When sliders are moved they show the colors
-  var mySavedValue = 0;
+  //
+  // Problem: sliders don't have functionality
+  // Solution: When sliders are moved they show the colors
 
-  function changeNumboxValue(value, number) {
-     var $numBox = number;
-     mySavedValue = value;
-     $numBox.val(mySavedValue);
-     console.log(mySavedValue);
+  var $red = 0;
+  function changeRedNumboxValue(value) {
+     var $numBox = $('#redNumber');
+     $red = value;
+     $numBox.val($red);
+     console.log($red);
    }
-   function changeSliderVal(value, color) {
-     var $slider = color;
-     mySavedValue = value;
-     $slider.val(mySavedValue);
-     console.log(mySavedValue);
+   function changeRedSliderVal(value) {
+     var $slider = $('#red');
+     $red = value;
+     $slider.val($red);
+     console.log($red);
    }
 
+   var $green = 0;
+   function changeGreenNumboxValue(value) {
+      var $numBox = $('#greenNumber');
+      $green = value;
+      $numBox.val($green);
+      console.log($green);
+    }
+    function changeGreenSliderVal(value) {
+      var $slider = $('#green');
+      $green = value;
+      $slider.val($green);
+      console.log($green);
+    }
+
+    var $blue = 0;
+    function changeBlueNumboxValue(value) {
+       var $numBox = $('#blueNumber');
+       $blue = value;
+       $numBox.val($blue);
+       console.log($blue);
+
+     }
+     function changeBlueSliderVal(value) {
+       var $slider = $('#blue');
+       $blue = value;
+       $slider.val($blue);
+       console.log($blue);
+
+     }
   //CONVERT RGB TO HEX
-  function rgbToHex(r,g,b) {
-    $hexRed = r.toString(16);
-    $hexGreen = g.toString(16);
-    $hexBlue = b.toString(16);
+  function rgbToHex() {
+    $hexRed = $red.toString(16);
+    $hexGreen = $green.toString(16);
+    $hexBlue = $blue.toString(16);
     console.log($hexRed);
     console.log($hexGreen);
     console.log($hexBlue);
@@ -71,3 +100,4 @@ $(function() {
     $color = rgbToHex();
     $colorChosen.css('background-color', $color);
   }
+  updateColor();
