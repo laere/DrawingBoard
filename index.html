@@ -13,8 +13,10 @@
       <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"> -->
       <link rel="stylesheet" href="css/animate.css">
       <link rel="stylesheet" href="css/main.css">
+      <script src="js/jquery-2.2.0.min.js"></script>
   </head>
   <body>
+  <script src="js/app.js"></script>
       <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -29,17 +31,17 @@
         <div id="color-picker">
             <div class="sliders">
               <span>Red</span>
-              <input id="red" type="range" name="amount1" value="0" min="0" max="255" oninput="changeNumboxValue(this.value)">
-              <input id="redNumber" type="number" name="amountInput1" value="0" min="0" max="255" oninput="changeSliderVal(this.value)">
-            <div class="sliders">
-              <span>Blue</span>
-              <input id="green" type="range" name="amount2" value="0" min="0" max="255" onchange="this.nextElementSibling.value=this.value">
-              <input id="greenNumber" type="number" name="amountInput2" value="0" min="0" max="255" onchange="this.previousElementSibling.value=this.value">
-            </div>
+              <input id="red" type="range" name="amount1" value="0" min="0" max="255" oninput="changeNumboxValue(this.value, $('#redNumber'))">
+              <input id="redNumber" type="number" name="amountInput1" value="0" min="0" max="255" oninput="changeSliderVal(this.value, $('#red'))">
             <div class="sliders">
               <span>Green</span>
-              <input id="blue" type="range" name="amount3" value="0" min="0" max="255"  onchange="this.nextElementSibling.value=this.value">
-              <input id="blueNumber" type="number" name="amountInput3" value="0" min="0" max="255" onchange="this.previousElementSibling.value=this.value">
+              <input id="green" type="range" name="amount2" value="0" min="0" max="255" oninput="changeNumboxValue(this.value, $('#greenNumber'))">
+              <input id="greenNumber" type="number" name="amountInput2" value="0" min="0" max="255" oninput="changeSliderVal(this.value, $('#green'))">
+            </div>
+            <div class="sliders">
+              <span>Blue</span>
+              <input id="blue" type="range" name="amount3" value="0" min="0" max="255" oninput="changeNumboxValue(this.value, $('#blueNumber'))">
+              <input id="blueNumber" type="number" name="amountInput3" value="0" min="0" max="255" oninput="changeSliderVal(this.value, $('#blue'))">
             </div>
             <span>Your Color:</span>
             <div id=color-chosen></div>
@@ -51,8 +53,7 @@
   </div>
 
 
-      <script src="js/jquery-2.2.0.min.js"></script>
-      <script src="js/app.js"></script>
+
       </script>
   </body>
 </html>

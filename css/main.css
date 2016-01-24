@@ -629,11 +629,9 @@ CANVAS AND COLORSS
         border: 1px solid black;
         width: 100px;
         height: 100px;
-        margin-bottom: 15px; }
+        margin: 0 auto; }
       #container #color-picker-wrapper #color-picker #add-color {
-        background-color: #c2a2bc;
-        width: 100%;
-        margin-top: -10px; }
+        background-color: #c2a2bc; }
       #container #color-picker-wrapper #color-picker .sliders {
         margin: 2px 0;
         text-align: center; }

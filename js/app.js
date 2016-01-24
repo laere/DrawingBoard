@@ -1,9 +1,8 @@
-$(document).ready(function() {
 
+$(function() {
   $colorPicker = $('#color-picker');
   $divColor = $('div.color');
-  //  $colorPicker.hide();
-  updateColor();
+
   //TOGGLE COLOR PICKER
   $('#color-picker-body').click(function() {
     //add animation class on click
@@ -30,27 +29,32 @@ $(document).ready(function() {
     //remove class if currently active on an element.
     $currentColor.removeClass('select');
   });
+});
+
   //Test function//
   // $('html').click(function() {
   //   console.log($redVal);
   // });
 
+
+  updateColor();
   //Problem: sliders don't have functionality
   //Solution: When sliders are moved they show the colors
   var mySavedValue = 0;
 
-  function changeNumboxValue(value) {
-    var $numBox = $("#redNumber");
-    mySavedValue = value;
-    $numBox.value = mySavedValue;
-    console.log(mySavedValue);
-  }
-  function changeSliderVal(value) {
-    var $slider = $("#red");
-    mySavedValue = value;
-    $slider.value = mySavedValue;
-    console.log(mySavedValue);
-  }
+  function changeNumboxValue(value, number) {
+     var $numBox = number;
+     mySavedValue = value;
+     $numBox.val(mySavedValue);
+     console.log(mySavedValue);
+   }
+   function changeSliderVal(value, color) {
+     var $slider = color;
+     mySavedValue = value;
+     $slider.val(mySavedValue);
+     console.log(mySavedValue);
+   }
+
   //CONVERT RGB TO HEX
   function rgbToHex(r,g,b) {
     $hexRed = r.toString(16);
@@ -64,7 +68,6 @@ $(document).ready(function() {
   //UPDATE COLOR BASED ON HEX VALUES
   function updateColor() {
     $colorChosen = $('#color-chosen');
-    $color = rgbToHex(55,22,111);
+    $color = rgbToHex();
     $colorChosen.css('background-color', $color);
   }
-});
