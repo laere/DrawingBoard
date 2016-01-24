@@ -635,7 +635,8 @@ CANVAS AND COLORSS
         width: 100%;
         margin-top: -10px; }
       #container #color-picker-wrapper #color-picker .sliders {
-        margin: 2px 0; }
+        margin: 2px 0;
+        text-align: center; }
       #container #color-picker-wrapper #color-picker #shapes {
         margin: 0;
         width: 200px;

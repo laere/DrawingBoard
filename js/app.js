@@ -1,11 +1,9 @@
-jQuery(function($) {
+$(document).ready(function() {
 
   $colorPicker = $('#color-picker');
   $divColor = $('div.color');
   //  $colorPicker.hide();
   updateColor();
-
-
   //TOGGLE COLOR PICKER
   $('#color-picker-body').click(function() {
     //add animation class on click
@@ -13,7 +11,6 @@ jQuery(function($) {
     //toggle the display of the color picker
     $colorPicker.toggle();
   });
-
   //ADD SELECTED COLOR
   $('#add-color').click(function() {
     //when button is clicked
@@ -24,7 +21,6 @@ jQuery(function($) {
     $colors.append('<div class=color></div>');
     //find a way to limit the amount of colors a user can add.
   });
-
   //INDICATE SELECTED COLOR
   $divColor.click(function() {
     //current color with select
@@ -34,20 +30,27 @@ jQuery(function($) {
     //remove class if currently active on an element.
     $currentColor.removeClass('select');
   });
-
   //Test function//
-  $('html').click(function() {
-    console.log($redVal);
-  });
+  // $('html').click(function() {
+  //   console.log($redVal);
+  // });
 
   //Problem: sliders don't have functionality
   //Solution: When sliders are moved they show the colors
+  var mySavedValue = 0;
 
-  //get values of RGB sliders.
-
-  $redVal = $('amount1').val();
-
-
+  function changeNumboxValue(value) {
+    var $numBox = $("#redNumber");
+    mySavedValue = value;
+    $numBox.value = mySavedValue;
+    console.log(mySavedValue);
+  }
+  function changeSliderVal(value) {
+    var $slider = $("#red");
+    mySavedValue = value;
+    $slider.value = mySavedValue;
+    console.log(mySavedValue);
+  }
   //CONVERT RGB TO HEX
   function rgbToHex(r,g,b) {
     $hexRed = r.toString(16);
@@ -58,13 +61,10 @@ jQuery(function($) {
     console.log($hexBlue);
     return '#' + $hexRed + $hexGreen + $hexBlue;
   }
-  //update the 'Your Color' with rgb color;
-
   //UPDATE COLOR BASED ON HEX VALUES
   function updateColor() {
     $colorChosen = $('#color-chosen');
     $color = rgbToHex(55,22,111);
     $colorChosen.css('background-color', $color);
   }
-
 });
