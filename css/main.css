@@ -575,7 +575,7 @@ CANVAS AND COLORSS
       margin-bottom: 5px; }
     #container #colors .select {
       border-radius: 40px;
-      border: 2px solid #2f2f2f; }
+      border: 1px solid #fff; }
   #container #color-picker-wrapper {
     width: 30%;
     height: 65%;
