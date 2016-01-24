@@ -18,3 +18,5 @@ Show current selected color.
 Get canvas working.
 
 Make it multiplayer.
+
+Add Hex coloring.
