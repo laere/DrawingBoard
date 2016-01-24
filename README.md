@@ -13,7 +13,7 @@ Add colors **DONE**
 
 Remove colors
 
-Show current selected color.
+Show current selected color.**DONE**
 
 Get canvas working.
 
