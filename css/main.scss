@@ -101,12 +101,14 @@ CANVAS AND COLORSS
         background-color: $bg-w;
         border-radius: 20px;
         box-shadow: 2px 2px 15px $bg-g;
+        border-bottom: 80px solid #c2a2bc;
         input {
           margin: 5px 0;
           display: inline-block;
         }
         span {
           display: block;
+          margin: 5px 0;
         }
         #color-chosen,  {
           border: 1px solid black;
@@ -116,6 +118,13 @@ CANVAS AND COLORSS
         }
         #add-color {
           background-color: #c2a2bc;
+          position: absolute;;
+          bottom: 3%;
+          left: 28%;
+          font-size: 1.75em;
+          color: $bg-w;
+          cursor:pointer;
+
         }
         .sliders {
           margin: 2px 0;
@@ -126,6 +135,9 @@ CANVAS AND COLORSS
           width: 200px;
           height: 100px;
           border: 1px solid black;
+        }
+        input[type=number] {
+          width: 50%;
         }
       }
     }
