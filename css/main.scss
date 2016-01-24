@@ -84,6 +84,7 @@ CANVAS AND COLORSS
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         cursor:pointer;
+
         p {
           color: white;
           text-align: center;
@@ -96,11 +97,13 @@ CANVAS AND COLORSS
         justify-content: center;
         align-items: center;
         flex-flow: column wrap;
+        position: relative;
         width: 50%;
         height: 100%;
         background-color: $bg-w;
         border-radius: 20px;
         box-shadow: 2px 2px 15px $bg-g;
+        border-bottom: 80px solid #c2a2bc;
         input {
           margin: 5px 0;
           display: inline-block;
@@ -122,6 +125,9 @@ CANVAS AND COLORSS
           cursor:pointer;
           margin-top: 10px;
           border-radius: 20px;
+          position: absolute;
+          left: 30%;
+          bottom: -14%;
         }
         .sliders {
           margin: 2px 0;

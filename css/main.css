@@ -611,11 +611,13 @@ CANVAS AND COLORSS
       justify-content: center;
       align-items: center;
       flex-flow: column wrap;
+      position: relative;
       width: 50%;
       height: 100%;
       background-color: #fff;
       border-radius: 20px;
-      box-shadow: 2px 2px 15px #666; }
+      box-shadow: 2px 2px 15px #666;
+      border-bottom: 80px solid #c2a2bc; }
       #container #color-picker-wrapper #color-picker input {
         margin: 5px 0;
         display: inline-block; }
@@ -633,7 +635,10 @@ CANVAS AND COLORSS
         color: #fff;
         cursor: pointer;
         margin-top: 10px;
-        border-radius: 20px; }
+        border-radius: 20px;
+        position: absolute;
+        left: 30%;
+        bottom: -14%; }
       #container #color-picker-wrapper #color-picker .sliders {
         margin: 2px 0;
         text-align: center; }
