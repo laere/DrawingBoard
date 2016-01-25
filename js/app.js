@@ -8,8 +8,8 @@ canvas.addEventListener('mousedown', setPosition, false);
 canvas.addEventListener('mouseenter', setPosition, false);
 
 function setPosition(e) {
-  pos.x = e.pageX;
-  pos.y = e.pageY;
+  pos.x = e.offsetX;
+  pos.y = e.offsetY;
 }
 function draw(e) {
   ctx.beginPath(); // begin
