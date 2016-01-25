@@ -642,11 +642,6 @@ CANVAS AND COLORSS
       #container #color-picker-wrapper #color-picker .sliders {
         margin: 2px 0;
         text-align: center; }
-      #container #color-picker-wrapper #color-picker #shapes {
-        margin: 0;
-        width: 200px;
-        height: 100px;
-        border: 1px solid black; }
       #container #color-picker-wrapper #color-picker input[type=number] {
         width: 50%; }
 
