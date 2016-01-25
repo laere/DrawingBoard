@@ -561,8 +561,6 @@ CANVAS AND COLORSS
   width: 90%;
   height: 970px; }
   #container canvas {
-    width: 60%;
-    height: 65%;
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #666; }
   #container #colors {
