@@ -13,9 +13,11 @@ Add colors **DONE**
 
 Remove colors
 
+Ability to clear canvas
+
 Show current selected color.**DONE**
 
-Get canvas working.
+Get canvas working. **DONE**
 
 Make it multiplayer.
 
