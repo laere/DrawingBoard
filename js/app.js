@@ -74,18 +74,20 @@ function addColor() {
   $colors = $('#colors');
   $div = $('<div class="color"></div>');
   //$div.addClass('animated jello');
-  $button = $('<input type="submit" value="x">');
+  $button = $('<input type="submit" value="x" class="removeColor">:focus');
   //div element has the current bg color of color chosen
   $div.css('background-color', rgb($red,$green,$blue));
   //append div
-  $button.css('display', 'block');
-  $button.css('float', 'left');
   $div.append($button);
   $colors.append($div);
   //SELECT FUNCTION
   $div.click(function() {
     $('.select').removeClass('select');
     $(this).addClass('select');
+  });
+  //REMOVE SELECTED COLOR
+  $button.click(function() {
+    $(this).parent().detach();
   });
 }
 //TOGGLE COLOR PICKER

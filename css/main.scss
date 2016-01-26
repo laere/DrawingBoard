@@ -41,31 +41,40 @@ CANVAS AND COLORSS
       box-shadow: 0 8px 6px -6px $bg-g;
     }
     #colors {
-      width: 5%;
+      width: 8%;
       height: 65%;
+      position: relative;
       //background-color: blue;
       // box-shadow: 0 8px 6px -6px $bg-g;
       .color {
         width: 70px;
         height: 70px;
         margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
         &:hover {
           animation: grow 0.5s ease-out;
           animation-fill-mode: forwards;
         }
       }
+      .removeColor {
+        padding: 5px;
+        background-color: #c2a8a2;
+        border-radius: 0;
+      }
       .select {
         border-radius: 40px;
         border: 5px solid #fff;
       }
-      @keyframes grow {
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1.10);
-        }
-      }
+      // @keyframes grow {
+      //   50% {
+      //     transform: scale(1.05);
+      //   }
+      //   100% {
+      //     transform: scale(1.10);
+      //   }
+      // }
     }
     #clear {
       display: block;
