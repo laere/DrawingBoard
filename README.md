@@ -11,7 +11,7 @@ Add the ability to choose any color in the RGB range. **DONE**
 
 Add colors **DONE**
 
-Remove colors
+Remove colors **DONE**
 
 Ability to clear canvas **DONE**
 
