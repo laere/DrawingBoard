@@ -541,7 +541,8 @@ html {
   background-color: #A2C2A8;
   box-sizing: border-box;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  letter-spacing: 2px; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -559,7 +560,8 @@ CANVAS AND COLORSS
   flex-flow: row nowrap;
   margin: 0 auto;
   width: 90%;
-  height: 970px; }
+  height: 970px;
+  position: relative; }
   #container canvas {
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #666; }
@@ -581,6 +583,12 @@ CANVAS AND COLORSS
     transform: scale(1.05); }
   100% {
     transform: scale(1.1); } }
+  #container #clear {
+    display: block;
+    position: absolute;
+    top: 13%;
+    background-color: #c2a8a2;
+    font-family: inherit; }
   #container #color-picker-wrapper {
     width: 30%;
     height: 65%;

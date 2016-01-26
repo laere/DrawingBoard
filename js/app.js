@@ -73,7 +73,7 @@ updateColor();
 function addColor() {
   $colors = $('#colors');
   $div = $('<div class="color"></div>');
-  $div.addClass('animated jello');
+  //$div.addClass('animated jello');
   //div element has the current bg color of color chosen
   $div.css('background-color', rgb($red,$green,$blue));
   //append div
