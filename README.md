@@ -13,7 +13,7 @@ Add colors **DONE**
 
 Remove colors
 
-Ability to clear canvas
+Ability to clear canvas **DONE**
 
 Show current selected color.**DONE**
 
