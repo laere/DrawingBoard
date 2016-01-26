@@ -6,13 +6,11 @@ window.onload = function() {
   //SET MOUSE VAR FALSE
   var mouseDown = false;
   var clear = document.querySelector('#clear');
-  
   //CLEARS THE CANVAS
   clear.addEventListener('click', function() {
     console.log('testest');
     ctx.clearRect(0,0,canvas.width,canvas.height);
   }, false);
-
   //DRAW EVENTS
   //MOUSEDOWN = TRUE
   canvas.addEventListener('mousedown', function(e) {
@@ -50,5 +48,4 @@ window.onload = function() {
     }
     e.preventDefault();
   }
-
 };

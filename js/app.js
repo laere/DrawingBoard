@@ -7,6 +7,7 @@ var $colorPicker = $('#color-picker');
 // Problem: sliders don't have functionality
 // Solution: When sliders are moved they show the colors
 //Data binding the RGB slider and input values
+updateColor();
 $colorPicker.hide();
 $addColor.click(function() {
   addColor();
@@ -68,21 +69,23 @@ function updateColor() {
   $colorChosen = $('#color-chosen');
   $colorChosen.css('background-color', rgb($red,$green,$blue));
 }
-updateColor();
 //ADD COLORS
 function addColor() {
   $colors = $('#colors');
   $div = $('<div class="color"></div>');
   //$div.addClass('animated jello');
+  $button = $('<input type="submit" value="x">');
   //div element has the current bg color of color chosen
   $div.css('background-color', rgb($red,$green,$blue));
   //append div
+  $button.css('display', 'block');
+  $button.css('float', 'left');
+  $div.append($button);
   $colors.append($div);
   //SELECT FUNCTION
   $div.click(function() {
     $('.select').removeClass('select');
     $(this).addClass('select');
-
   });
 }
 //TOGGLE COLOR PICKER
