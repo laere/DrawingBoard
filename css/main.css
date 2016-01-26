@@ -569,11 +569,18 @@ CANVAS AND COLORSS
     #container #colors .color {
       width: 70px;
       height: 70px;
-      background-color: #fff;
       margin-bottom: 5px; }
+      #container #colors .color:hover {
+        animation: grow 0.5s ease-out;
+        animation-fill-mode: forwards; }
     #container #colors .select {
       border-radius: 40px;
-      border: 1px solid #fff; }
+      border: 5px solid #fff; }
+@keyframes grow {
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1.1); } }
   #container #color-picker-wrapper {
     width: 30%;
     height: 65%;

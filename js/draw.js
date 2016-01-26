@@ -1,30 +1,46 @@
 window.onload = function() {
-  var pos = {x:0,y:0};
+  //VARIABLES
   var canvas = document.querySelector('#canv');
-  var ctx = canvas.getContext('2d');
+  var pos = { x: 0, y: 0 };
+  //SET MOUSE VAR FALSE
+  var mouseDown = false;
 
-  function setPosition(e) {
-    pos.x = e.pageX;
-    pos.y = e.pageY;
-  }
-  function draw(e) {
-    // mouse left button must be pressed
-    if (e.buttons !== 1) return;
-
-    ctx.beginPath(); // begin
-
-    ctx.lineWidth = 5;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = '#c0392b';
-
-    ctx.moveTo(pos.x, pos.y); // from
-    setPosition(e);
-    ctx.lineTo(pos.x, pos.y); // to
-
-    ctx.stroke(); // draw it!
-  }
-
+  //DRAW EVENTS
+  //MOUSEDOWN = TRUE
+  canvas.addEventListener('mousedown', function(e) {
+    lastEvent = e;
+    mouseDown = true;
+  }, false);
   canvas.addEventListener('mousemove', draw, false);
-  canvas.addEventListener('mousedown', setPosition, false);
-  canvas.addEventListener('mouseenter', setPosition, false);
+  //PREVENTS DRAWING WITHOUT MOUSEDOWN = TRUE;
+  canvas.addEventListener('mouseup', function() {
+    mouseDown = false;
+  }, false);
+  //PREVENTS DRAWING IF MOUSE LEAVES AND COMES BACK TO CANVAS
+  canvas.addEventListener('mouseleave', function() {
+    mouseDown = false;
+  }, false);
+  function setPosition(e) {
+    pos.x = e.offsetX;
+    pos.y = e.offsetY;
+  }
+  //SET CANVAS CONTEXT
+  function draw(e) {
+    var ctx = canvas.getContext('2d');
+    //IF TRUE, DRAW
+    if (mouseDown) {
+      ctx.beginPath(); // begin
+      ctx.moveTo(lastEvent.offsetX, lastEvent.offsetY);
+      setPosition(e);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.lineWidth = 5;
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = $('.select').css('background-color');
+      ctx.stroke();
+      lastEvent = e;
+    } else if (!mouseDown) {
+        return;
+    }
+    e.preventDefault();
+  }
 };

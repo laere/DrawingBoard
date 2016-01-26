@@ -1,39 +1,4 @@
 
-var pos = { x: 0, y: 0 };
-var canvas = document.querySelector('#canv');
-var ctx = canvas.getContext('2d');
-var mouseDown = false;
-
-//DRAW EVENTS
-canvas.addEventListener('mousedown', function(e) {
-  lastEvent = e;
-  mouseDown = true;
-}, false);
-canvas.addEventListener('mousemove', draw, false);
-canvas.addEventListener('mouseup', function() {
-  mouseDown = false;
-}, false);
-canvas.addEventListener('mouseleave', function() {
-  canvas.mouseup();
-}, false);
-function setPosition(e) {
-  pos.x = e.offsetX;
-  pos.y = e.offsetY;
-}
-//SET CANVAS CONTEXT
-function draw(e) {
-  if (mouseDown) {
-  ctx.beginPath(); // begin
-  ctx.moveTo(lastEvent.offsetX, lastEvent.offsetY);
-  setPosition(e);
-  ctx.lineTo(pos.x, pos.y);
-  ctx.lineWidth = 5;
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = $('.select').css('background-color');
-  ctx.stroke();
-  lastEvent = e;
-  }
-}
 var $red = 0;
 var $green = 0;
 var $blue = 0;
